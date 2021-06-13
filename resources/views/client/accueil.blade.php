@@ -2,11 +2,11 @@
 @section('contenu')
 <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Bienvenue <span>Lac</span>Fashion
+      <h1>Bienvenue <span>Chez</span>nous
       </h1>
       <h2 class="bleu"><span>Le pagne trationnel au plaisir de la jeunesse africaine</span></h2>
       <div class="d-flex">
-        <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+        <a href="https://youtu.be/EeN4mTKRVyM" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
       </div>
     </div>
   </section><!-- End Hero -->
@@ -29,13 +29,13 @@
             <img class="card-img-top img-fluid" src="{{asset('storage').'/'.$categorie->photo}}" style="width:300px;height:350px;" alt="Card image cap">
 
             <div class="card-body">
-                <h4 class="text-center mt-1"><a class="btn btn-primary " href="{{route('categorie.produit',$categorie->id)}}">{{$categorie->nom}}</a> </h4>
+                <h4 class="text-center mt-1"><a class="btn btn-primary " href="{{route('cata.scategorie',$categorie->id)}}">{{$categorie->nom}}</a> </h4>
             </div>
           </div>
            @endforeach
 
         </div>
- 
+
         </div>
       </div>
     </div>

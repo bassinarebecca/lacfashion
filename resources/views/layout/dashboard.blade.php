@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>LacFasion</title>
+  <title>Pagne authentique</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
         </div>
-        <div class="sidebar-brand-text mx-3">Lac<span class="text-primary">Fashion</span> </div>
+        <div class="sidebar-brand-text mx-3">Le pagne<span class="text-primary">Authentique</span> </div>
       </a>
       <!-- Divider -->
       <hr class="sidebar-divider my-0">

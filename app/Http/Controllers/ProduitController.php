@@ -79,4 +79,12 @@ class ProduitController extends Controller
     {
          return view('client.detailProduit',compact('produit'));
     }
+
+    public function show($id)
+    {
+        $produit = Produit::find($id);
+        $categories=Categorie::all();
+        return view('client.detailProduit',compact('produit','categories'));
+        //return view('products.show')->with('product', $product);
+    }
 }

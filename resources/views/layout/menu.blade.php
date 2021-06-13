@@ -35,7 +35,7 @@
         <i class="icofont-phone"></i> +226 72 41 40 73
       </div>
       <div class="social-links">
-        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="https://www.facebook.com/PADAF-103550915300853" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
       </div>
@@ -46,11 +46,11 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Lac<span>Fashion</span></a></h1>
+      <h1 class="logo mr-auto"><a href="index.html">Le pagne<span>Authentique</span></a></h1>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
-          <li><a href="#about">A propos</a></li>
+          <li><a href="{{route('apropos')}}">A propos</a></li>
           <li><a href="{{route('produit')}}">Produits</a></li>
           <li class="drop-down"><a href="">Catalogue</a>
             <ul>
@@ -59,7 +59,9 @@
                 @endforeach
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="{{route('contact')}}">Contact</a></li>
+          <li><a class="text-muted" href="#panier">Panier</a></li>
+
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -84,10 +86,22 @@
           <div class="col-lg-6 col-md-6 footer-links">
             <div class="social-links  d-flex">
               <h6>Newsletters</h6>
-              <form class="d-flex ml-1" action="" method="post">
+              @if (session()->has('success'))
+                <div class="alert alert-success">
+                   (session()->get('success'))
+                </div>
+              @endif
+              @if (session()->has('failure'))
+              <div class="alert alert-failure">
+                 (session()->get('failure'))
+              </div>
+            @endif
+              <form class="d-flex ml-1" action="{{route('test')}}" method="post">
+                  @csrf
                 <input type="email" name="email">
                 <input type="submit" value="Subscribe">
               </form>
+
             </div>
         </div>
       </div>

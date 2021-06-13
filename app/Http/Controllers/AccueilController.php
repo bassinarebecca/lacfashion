@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Categorie;
 use App\Produit;
-use App\Product;
 use App\SousCategorie;
 use Illuminate\Http\Request;
 
@@ -16,11 +15,31 @@ class AccueilController extends Controller
         return view('client.accueil', compact('categories', 'scategories'));
     }
 
+
+    public function apropos()
+    {
+        $categories=Categorie::all();
+        $scategories=SousCategorie::all();
+        return view('apropos',compact('categories'));
+    }
+    public function contact()
+    {
+        $categories=Categorie::all();
+        $scategories=SousCategorie::all();
+        return view('contact',compact('categories'));
+    }
+
     public function categorie_produit($categorie){
         $categories=Categorie::all();
         $produits=Produit::where('categorie_id', '=', $categorie)->get();
         return view('client.pays', compact('produits', 'categories'));
     }
+    // public function show($slug)
+    // {
+    //     $product = Produit::where('slug', $slug)->firstOrFail();
+
+    //     return view('products.show')->with('product', $product);
+    // }
 
     public function produit(){
         $produits=Produit::all();
@@ -40,12 +59,12 @@ class AccueilController extends Controller
     }
 
     //detail
-    public function detail()
-    {
-        $products = Product::whereActive(true)->get();
-        $produits=Produit::where('sous_categorie_id', '=', $products)->get();
+    // public function detail()
+    // {
+    //     $products = Product::whereActive(true)->get();
+    //     $produits=Produit::where('sous_categorie_id', '=', $products)->get();
 
-        return view('home', compact('products'));
-    }
+    //     return view('home', compact('products'));
+    // }
 
 }

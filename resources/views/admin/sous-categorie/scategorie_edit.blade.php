@@ -1,16 +1,14 @@
 @extends('layout.dashboard')
 @section('contenu')
 <div class="droite  card col ">
-    <div class="card-header text-center font-weight-bold"> <i class="text-info fas fa-edit"></i> Modifier {{$categorie->nom}}</div>
+    <div class="card-header text-center font-weight-bold"> <i class="text-info fas fa-plus-circle"></i>Sous Categorie</div>
     <div class="card-body">
-        <form method="post" action="{{route('categorie.update', $categorie->id)}}" id="tr_form" enctype="multipart/form-data" >
-            {{ method_field('POST') }}
+        <form method="post" action="{{route('scategorie.update', $categorie->id)}}" id="tr_form" enctype="multipart/form-data" >
             @csrf
-            @method('PATCH')
             <div class="form-group row">
                 <label for="code" class="col-12 col-lg-2 text-right control-label col-form-label">Nom:</label>
                 <div class="col ">
-                    <input id="code" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ old('nom') ?? $categorie->nom }}"  placeholder="ajouter le nom ">
+                    <input id="code" type="text" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ old('nom') }}"  placeholder="ajouter le nom ">
                     @error('nom')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

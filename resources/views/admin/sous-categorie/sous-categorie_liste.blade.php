@@ -25,7 +25,7 @@
                         <td class="text-bold"> {{$categorie->nom}} </td>
                         <td><img class="img-fluide" src="{{asset('storage').'/'.$categorie->photo}}" style="width:40px;height:40px;" class="bf5 border rounded-circle "></td>
                         <td><a href="  "><button class="btn btn-success"> <i class="fas fa-eye"></i></button></a>  </td>
-                        <td> <a href="{{route('categorie.edit', $categorie->id)}}  "><button class="btn btn-primary"><i class="fas fa-edit"></i></button></a>  </td>
+                        <td> <a href="{{route('scategorie.update', $categorie->id)}}  "><button class="btn btn-primary"><i class="fas fa-edit"></i></button></a>  </td>
                         <td>
                             <form action="{{route('categorie.delete', $categorie->id)}}" method="post" class="d-inline">
                                 @csrf

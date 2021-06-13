@@ -85,4 +85,22 @@ class CategorieController extends Controller
         return redirect()->back();
     }
 
+    public function update_scategorie(Request $request, Categorie $categorie)
+    {
+        $data=request()->validate([
+            'nom'=> ['required','string'],
+            'photo'=> ['image'],
+          ]);
+        if(request('photo')){
+            $imagePath=request('photo')->store('uploads','public');
+            $categorie->update(array_merge($data,['photo'=>$imagePath]));
+          }
+          else{
+            $categorie->nom=$request->nom;
+            $categorie->save();
+          }
+          return redirect()->route('sous-categorie.liste',$categorie);
+    }
+
+
 }

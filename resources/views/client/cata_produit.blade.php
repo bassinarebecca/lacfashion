@@ -6,8 +6,8 @@
 
      <div class="section-title">
        <h2>nous</h2>
-       <h3>Our Hardworking <span>Team</span></h3>
-       <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+       <h3> Pagne authentique d'Afrique<span> Pagne tissé</span></h3>
+       <p>Pagne authentique d'Afrique, africainement beau africainement belle! Pagne authentique d'Afrique c'est la qualité supérieure. Tenue prêt à porté pour hommes, femmes, mariages(couple), enfants. Faites vos choix avec nos différents modèles</p>
      </div>
 
     <div class="row">
@@ -18,7 +18,7 @@
            <div class="member-img">
              <img src="{{asset('storage').'/'.$produit->photo}}" class="img-fluid" style="width:300px;height:350px;"alt="">
              <div class="social">
-                <a href="{{ route('produit.show', $produit->id) }}"><i class="icofont-eye"></i></a>
+                <a href="{{ route('client.detailProduit', $produit->id) }}"><i class="icofont-eye"></i></a>
                 <a href=""><i class="fas fa-cart-plus"></i></a>
              </div>
            </div>
