@@ -92,4 +92,4 @@ Route::post('/menu_store', 'NewsletterController@store')->name('test');
 
 
 
-Route::get('','');
+
